@@ -169,12 +169,6 @@ const handleSuggestionClick = (suggestion: string, isFromTimezone: boolean) => {
       <li className="text-gray-600">Click on the "Convert" button to see the converted time.</li>
       <li className="text-gray-600">Optionally, check the current weather in your selected cities.</li>
     </ol>
-    <a 
-      href="https://time-zone-converter-xi.vercel.app/"
-      className="mt-4 inline-block text-center bg-blue-500 text-white rounded-lg py-2 px-4 hover:bg-blue-600 transition duration-300"
-    >
-      Start Converting Now
-    </a>
   </div>
 </div>
       <div className="timezone-converter mt-8 p-4 bg-gray-700 shadow-md rounded-lg w-full max-w-4xl">
