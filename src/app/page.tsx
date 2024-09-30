@@ -28,6 +28,41 @@ const HomePage = () => {
         <meta property="og:url" content="/" />
         <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Timezone Converter",
+          "description": "A user-friendly timezone converter that allows you to convert time between different timezones, view world clocks, and check the current weather in trending cities.",
+          "url": "https://time-zone-converter-xi.vercel.app/",
+          "mainEntity": {
+            "@type": "SoftwareApplication",
+            "name": "Timezone Converter App",
+            "operatingSystem": "Web",
+            "applicationCategory": "Utility",
+            "description": "An application for converting time across different timezones and checking the weather in various cities.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD",
+              "itemCondition": "https://schema.org/NewCondition",
+              "availability": "https://schema.org/InStock"
+            }
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "HA Tools"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://time-zone-converter-xi.vercel.app/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+        `}} />
+        
+
+
       </Head>
       <div>
         <Header />

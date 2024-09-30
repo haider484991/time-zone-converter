@@ -156,7 +156,27 @@ const handleSuggestionClick = (suggestion: string, isFromTimezone: boolean) => {
   return (
     <div className="flex flex-col items-center p-4 bg-gradient-to-r from-gray-800 to-gray-900 min-h-screen">
       <h2 className="text-4xl font-bold text-white mb-4">🌍 Timezone Converter</h2>
-
+      <div className="max-w-md mx-auto my-6 bg-white rounded-lg shadow-md overflow-hidden">
+  <div className="p-6">
+    <h2 className="text-lg font-semibold text-gray-800">How to Use the Timezone Converter App</h2>
+    <p className="mt-2 text-gray-600">
+      Follow these simple steps to convert time across different time zones:
+    </p>
+    <ol className="mt-4 list-decimal list-inside">
+      <li className="text-gray-600">Select your current timezone from the dropdown menu.</li>
+      <li className="text-gray-600">Choose the target timezone you want to convert to.</li>
+      <li className="text-gray-600">Enter the time you wish to convert in the input field.</li>
+      <li className="text-gray-600">Click on the "Convert" button to see the converted time.</li>
+      <li className="text-gray-600">Optionally, check the current weather in your selected cities.</li>
+    </ol>
+    <a 
+      href="https://time-zone-converter-xi.vercel.app/"
+      className="mt-4 inline-block text-center bg-blue-500 text-white rounded-lg py-2 px-4 hover:bg-blue-600 transition duration-300"
+    >
+      Start Converting Now
+    </a>
+  </div>
+</div>
       <div className="timezone-converter mt-8 p-4 bg-gray-700 shadow-md rounded-lg w-full max-w-4xl">
         <h3 className="text-2xl font-semibold mb-2 text-white">🕒 Convert Time</h3>
 

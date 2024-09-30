@@ -1,7 +1,9 @@
 // src/app/articles/understanding-time-zones/page.tsx
+
 import Head from 'next/head';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import React from 'react';
 
 const UnderstandingTimeZones = () => {
   return (
