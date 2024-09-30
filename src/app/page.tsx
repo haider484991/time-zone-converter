@@ -11,21 +11,7 @@ const articles = [
     description: "Explore the concept of time zones, their history, and how they affect our daily lives.",
     url: "/articles/understanding-time-zones",
   },
-  {
-    title: "How Daylight Saving Time Affects You",
-    description: "Learn about daylight saving time, its origins, and how it impacts timekeeping.",
-    url: "/articles/daylight-saving-time",
-  },
-  {
-    title: "The Importance of Accurate Timekeeping in Business",
-    description: "Discover why accurate timekeeping is crucial for businesses and how to manage it effectively.",
-    url: "/articles/importance-of-timekeeping",
-  },
-  {
-    title: "Scheduling Across Time Zones: Tips and Tricks",
-    description: "Get practical advice on how to schedule meetings and events across different time zones.",
-    url: "/articles/scheduling-across-time-zones",
-  },
+  
 ];
 
 const HomePage = () => {
