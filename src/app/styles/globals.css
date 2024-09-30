@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* src/app/styles/globals.css */
+body {
+  @apply bg-gradient-to-r from-gray-800 to-gray-900; /* Dark gradient background */
+  font-family: 'Inter', sans-serif;
+  color: #ffffff; /* White text color for contrast */
+  margin: 0; /* Remove default margin */
+}
+
+h1, h2, h3 {
+  @apply font-bold;
+}
+
+.clock-container {
+  
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  gap: 20px; /* Space between clocks */
+}
+
+.clock-col {
+  background-color: #1f1f1f; /* Dark background for each clock */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Darker shadow for depth */
+  padding: 20px; /* Padding inside each clock */
+  text-align: center; /* Center text */
+  width: 300px; /* Fixed width */
+  transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.clock-col:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.clock-label {
+  font-size: 0.9rem; /* Slightly larger font size for labels */
+  color: #cccccc; /* Light gray color for labels */
+  margin-top: 5px; /* Space above labels */
+}
+
+.clock-timer {
+  font-size: 2.5rem; /* Larger font for time */
+  font-weight: bold; /* Bold for emphasis */
+  color: #ffffff; /* White color for time */
+}
+
+h2 {
+  color: #ffffff; /* White color for main heading */
+}
+
+h3 {
+  margin-top: 10px; /* Space above city name */
+  font-size: 1.8rem; /* Increased size for city name */
+  color: #ffffff; /* White color for city name */
+}
+
+img {
+  display: block; /* Ensures the image is a block-level element */
+  margin: 20px auto; /* Centers the image horizontally and adds top/bottom margin */
+  max-width: 80%; /* Scales the image to fit within 80% of the container width */
+  height: auto; /* Maintains the aspect ratio of the image */
+  filter: brightness(1.2); /* Brightens the image */
+  transition: transform 0.4s ease, filter 0.4s ease; /* Adds smooth transition for hover effects */
+  animation: pulse 3s infinite; /* Adds a pulse animation */
+}
+
+/* Hover effect to make the image pop when hovered */
+img:hover {
+  transform: scale(1.1); /* Grows the image slightly when hovered */
+  filter: brightness(1.4); /* Increases brightness when hovered */
+}
+
+p {
+  margin: 5px 0; /* Space between paragraphs */
+}
+
+.text-red-500 {
+  color: #e74c3c; /* Red color for error messages */
+}
+
+.timezone-converter {
+  background-color: #2d2d2d; /* Darker background for the converter */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the converter */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  width: 100%; /* Full width */
+  max-width: 800px; /* Limit max width */
+  margin: 0 auto; /* Center the converter */
+}
+
+.suggestions-list {
+  background-color: #333; /* Dark background for dropdown */
+  border: 1px solid #666; /* Light border for dropdown */
+  border-radius: 5px; /* Rounded corners for dropdown */
+  max-height: 200px; /* Limit height of dropdown */
+  overflow-y: auto; /* Scroll if too many suggestions */
+  position: absolute; /* Position dropdown */
+  z-index: 10; /* Ensure dropdown appears above other elements */
+  width: 100%; /* Full width */
+}
+
+.suggestion-item {
+  padding: 10px; /* Padding for each suggestion */
+  color: #ffffff; /* White text for suggestions */
+}
+
+.suggestion-item:hover {
+  background-color: #3b82f6; /* Blue background on hover */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.input-field {
+  background-color: #444; /* Dark background for input fields */
+  color: #ffffff; /* White text for input fields */
+  border: 1px solid #666; /* Light border for input fields */
+  padding: 10px; /* Padding inside input */
+  border-radius: 5px; /* Rounded corners for input */
+  width: 100%; /* Full width */
+  margin-bottom: 10px; /* Space below input */
+}
+
+button {
+  background-color: #3b82f6; /* Blue background for buttons */
+  color: #ffffff; /* White text for buttons */
+  padding: 10px; /* Padding inside button */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners for button */
+  width: 100%; /* Full width */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+button:hover {
+  background-color: #2563eb; /* Darker blue on hover */
+}
+
+.error-message {
+  color: #e74c3c; /* Red color for error messages */
+  margin-top: 10px; /* Space above error message */
+}
+
+
+/* Keyframes for the pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1); /* Starts at original size */
+  }
+  50% {
+    transform: scale(1.05); /* Grows slightly at the peak */
+  }
+  100% {
+    transform: scale(1); /* Shrinks back to original size */
+  }
+}

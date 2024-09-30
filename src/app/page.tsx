@@ -1,101 +1,75 @@
-import Image from "next/image";
+// src/app/page.tsx
+import Head from 'next/head';
+import React from 'react';
+import WorldClock from './components/WorldClock';
+import Header from '../app/components/Header';
+import Footer from '../app/components/Footer';
 
-export default function Home() {
+const articles = [
+  {
+    title: "Understanding Time Zones: A Comprehensive Guide",
+    description: "Explore the concept of time zones, their history, and how they affect our daily lives.",
+    url: "/articles/understanding-time-zones",
+  },
+  {
+    title: "How Daylight Saving Time Affects You",
+    description: "Learn about daylight saving time, its origins, and how it impacts timekeeping.",
+    url: "/articles/daylight-saving-time",
+  },
+  {
+    title: "The Importance of Accurate Timekeeping in Business",
+    description: "Discover why accurate timekeeping is crucial for businesses and how to manage it effectively.",
+    url: "/articles/importance-of-timekeeping",
+  },
+  {
+    title: "Scheduling Across Time Zones: Tips and Tricks",
+    description: "Get practical advice on how to schedule meetings and events across different time zones.",
+    url: "/articles/scheduling-across-time-zones",
+  },
+];
+
+const HomePage = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <Head>
+        <title>TimeZone Converter - Convert Time Between Different Zones</title>
+        <meta name="description" content="Easily convert time between different time zones with our user-friendly TimeZone Converter. Accurate and reliable time conversion for users worldwide." />
+        <meta name="keywords" content="Timezone Converter, Time Conversion, World Clock, Convert Time, UTC Time" />
+        <link rel="canonical" href="/" />
+        <meta property="og:title" content="TimeZone Converter - Convert Time Between Different Zones" />
+        <meta property="og:description" content="Easily convert time between different time zones with our user-friendly TimeZone Converter. Accurate and reliable time conversion for users worldwide." />
+        <meta property="og:image" content="/images/og-image.jpg" /> {/* Replace with your actual image */}
+        <meta property="og:url" content="/" />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <div>
+        <Header />
+        <main>
+          <h1 className="text-4xl font-bold text-center my-10">Welcome to the TimeZone Converter</h1>
+          <p className="text-lg text-center mb-5">Convert time easily and accurately between different time zones. Whether you're scheduling meetings or planning travel, our tool has you covered.</p>
+          <WorldClock />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <section className="my-10">
+            <h2 className="text-3xl font-bold text-center mb-5">Latest Articles</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {articles.map((article, index) => (
+                <article key={index} className="bg-gray-800 p-5 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                  <h3 className="text-xl font-semibold">
+                    <a href={article.url} className="text-blue-400 hover:underline">
+                      {article.title}
+                    </a>
+                  </h3>
+                  <p className="mt-2 text-gray-300">{article.description}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+        </main>
+        <Footer />
+      </div>
+    </>
   );
-}
+};
+
+export default HomePage;
